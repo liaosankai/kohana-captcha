@@ -27,6 +27,7 @@ class Controller_Captcha extends Controller {
 	 */
 	public function action_index()
 	{
+		$group = $this->request->param('group');
 		// Output the Captcha challenge resource (no html)
 		// Pull the config group name from the URL
 		$image = Captcha::instance($group)->render(FALSE);
